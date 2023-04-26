@@ -1,29 +1,8 @@
 #include <iostream>
 
-
-void max(int a, int b)
-{
-    if (a > b)
-    {
-        std::cout << a;
-    }
-    if (a == b)
-    {
-        std::cout << a;
-    }
-    else
-    {
-        std::cout << b;
-    }
-}
-
 void max(float a, float b)
 {
     if (a > b)
-    {
-        std::cout << a;
-    }
-    if (a == b)
     {
         std::cout << a;
     }
@@ -35,59 +14,14 @@ void max(float a, float b)
 
 void max(int a, int b, int c)
 {
-    if (a != b && b != c)
-    {
-        if (a > b && a > c)
-        {
-            std::cout << a;
-        }
-        if (b > a && b > c)
-        {
-            std::cout << b;
-        }
-        if (c > a && c > b)
-        {
-            std::cout << c;
+    int* arr = new int [3]{a, b ,c};
+    int Maximum = arr[0];
+    for(int i = 1; i < 3; i ++){
+        if(arr[i] > Maximum){
+            Maximum = arr[i];
         }
     }
-
-    else
-    {
-        if (a == b && a > c)
-        {
-            std::cout << a;
-        }
-        if (a == b && a < c)
-        {
-            std::cout << c;
-        }
-
-
-        if (c == b && c < a)
-        {
-            std::cout << a;
-        }
-        if (c == b && c > a)
-        {
-            std::cout << c;
-        }
-
-
-        if (a == c && a < b)
-        {
-            std::cout << b;
-        }
-        if (a == c && a > b)
-        {
-            std::cout << a;
-        }
-
-
-        if (a == b && b == c)
-        {
-            std::cout << a;
-        }
-    }
+    std::cout << Maximum;
 }
 
 
