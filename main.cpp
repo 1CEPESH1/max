@@ -1,37 +1,25 @@
 #include <iostream>
 
 
-int max(int a, int b)
+template<typename T>
+T max(T a, T b)
 {
-    int maximum = b;
+    T maximum = b;
     if (a > b)
     {
         maximum = a;
 
     }
-    std::cout << "function accepting 2 int values" << std::endl;
-    return maximum;
-
-}
-
-int max(float a, float b)
-{
-    float maximum = b;
-    if (a > b)
-    {
-        maximum = a;
-
-    }
-    std::cout << "function accepting 2 float values" << std::endl;
+    std::cout << "function accepting 2 values" << std::endl;
     return maximum;
 
 }
 
 
-
-int max(int a, int b, int c)
+template<typename T>
+T max(T a, T b, T c)
 {
-    int maximum = a;
+    T maximum = a;
     if (b > a)
     {
         maximum = b;
@@ -40,7 +28,7 @@ int max(int a, int b, int c)
     {
         maximum = c;
     }
-    std::cout << "function accepting 3 int values" << std::endl;
+    std::cout << "function accepting 3 values" << std::endl;
     return maximum;
 
 }
@@ -48,13 +36,12 @@ int max(int a, int b, int c)
 
 int main()
 {
+
     float a = 3, b = 4, c = 5;
 
     std::cout << max(a, b, c);
     std::cout << std::endl;
     std::cout << max(a, b);
-    std::cout << std::endl;
-    std::cout << max((int)a, (int)c);
     std::cout << std::endl;
     /*std::cout << " how many numbers do you want to enter 2 or 3?" << std::endl;
     std::cin >> d;
