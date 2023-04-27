@@ -1,21 +1,6 @@
 #include <iostream>
-#include "functions.h"
+#include "function three values.h"
 using namespace std;
-
-template<typename T>
-T max(T a, T b)
-{
-    T maximum = b;
-    if (a > b)
-    {
-        maximum = a;
-
-    }
-    std::cout << "function accepting 2 values" << std::endl;
-    return maximum;
-
-}
-
 
 template<typename T>
 T max(T a, T b, T c)
@@ -31,5 +16,4 @@ T max(T a, T b, T c)
     }
     std::cout << "function accepting 3 values" << std::endl;
     return maximum;
-
 }
