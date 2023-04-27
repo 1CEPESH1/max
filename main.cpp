@@ -1,18 +1,35 @@
 #include <iostream>
 
-void max(float a, float b)
+
+int max(int a, int b)
 {
     if (a > b)
     {
         std::cout << a;
+        return a;
     }
     else
     {
         std::cout << b;
+        return b;
     }
 }
 
-void max(int a, int b, int c)
+int max(float a, float b)
+{
+    if (a > b)
+    {
+        std::cout << a;
+        return a;
+    }
+    else
+    {
+        std::cout << b;
+        return b;
+    }
+}
+
+/*void max(int a, int b, int c)
 {
     int* arr = new int [3]{a, b ,c};
     int Maximum = arr[0];
@@ -22,6 +39,28 @@ void max(int a, int b, int c)
         }
     }
     std::cout << Maximum;
+}*/
+
+int max(int a, int b, int c)
+{
+    if (a > b && a > c)
+    {
+        std::cout << a;
+        return a;
+    }
+
+
+    if (a > b && b == c)
+    {
+        std::cout << a;
+        return a;
+    }
+
+    if (a == b && b == c)
+    {
+        std::cout << a;
+        return a;
+    }
 }
 
 
@@ -43,6 +82,20 @@ int main()
     {
         std::cout << "enter three" << std::endl;
         std::cin >> a >> b >> c;
-        max(a, b, c);
+        int resault = max(a, b, c);
+        if (resault == a)
+        {
+            return 0;
+        }
+        resault = max(b, c, a);
+        if (resault == a)
+        {
+            return 0;
+        }
+        resault = max(c, a, b);
+        if (resault == a)
+        {
+            return 0;
+        }
     }
 }
