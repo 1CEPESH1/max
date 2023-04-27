@@ -41,7 +41,7 @@ void max(float a, float b)
     std::cout << Maximum;
 }*/
 
-void max(int a, int b, int c)
+int max(int a, int b, int c)
 {
     int maximum = a;
     if (b > a)
@@ -52,7 +52,7 @@ void max(int a, int b, int c)
     {
         maximum = c;
     }
-    std::cout << maximum;
+    return maximum;
 }
 
 
@@ -74,7 +74,7 @@ int main()
     {
         std::cout << "enter three" << std::endl;
         std::cin >> a >> b >> c;
-        max(a, b, c);
+        std::cout << max(a, b, c);
     }
     return 0;
 }
