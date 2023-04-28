@@ -2,7 +2,7 @@
 // Created by т on 28.04.2023.
 //
 #include <iostream>
-#include "functions.h"
+
 
 #ifndef MAX_FUNCTIONS_H
 #define MAX_FUNCTIONS_H
