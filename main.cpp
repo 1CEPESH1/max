@@ -1,6 +1,5 @@
 #include <iostream>
-#include "function two values.h"
-#include "function three values.h"
+#include "functions.h"
 using namespace std;
 
 
